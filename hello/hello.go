@@ -9,7 +9,7 @@ import (
 
 func main() {
 	log.SetPrefix("greetings: ")
-	message, err := greetings.Hello("")
+	message, err := greetings.Hello("Gladiolaaaa")
 	if err != nil {
 		log.Fatal(err)
 	}
