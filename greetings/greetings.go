@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 func Hello(name string) (string, error) {
@@ -12,6 +13,14 @@ func Hello(name string) (string, error) {
 	}
 	message := fmt.Sprintf(randomFormat(), name)
 	return message, nil
+}
+
+func init() {
+	rand.Seed(time.Now().UnixNano())
+	fmt.Printf("in the init func %v", time.Now().UnixNano())
+	fmt.Println()
+	fmt.Println(time.Now())
+	fmt.Println()
 }
 
 func randomFormat() string {
