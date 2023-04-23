@@ -16,6 +16,9 @@ func main() {
 		log.Fatal(err1)
 	}
 	fmt.Println(messages)
+	for _, message := range messages {
+		fmt.Println(message)
+	}
 
 	message, err := greetings.Hello("Gladiolaaaa")
 	if err != nil {
